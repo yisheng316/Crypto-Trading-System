@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS prices (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    symbol VARCHAR(10) NOT NULL,
+    bid_price DECIMAL(20,8) NOT NULL,
+    ask_price DECIMAL(20,8) NOT NULL,
+    exchange VARCHAR(10) NOT NULL,
+    timestamp TIMESTAMP NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS wallet (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    currency VARCHAR(10) NOT NULL,
+    balance DECIMAL(20,8) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS trades (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    symbol VARCHAR(10) NOT NULL,
+    type VARCHAR(4) NOT NULL,
+    price DECIMAL(20,8) NOT NULL,
+    quantity DECIMAL(20,8) NOT NULL,
+    total DECIMAL(20,8) NOT NULL,
+    timestamp TIMESTAMP NOT NULL
+);
