@@ -1,13 +1,13 @@
-package com.example.crypto.trading.system;
+package com.trading;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CryptoTradingSystemApplication {
+public class CryptoTradingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CryptoTradingSystemApplication.class, args);
+		SpringApplication.run(CryptoTradingApplication.class, args);
 	}
 
 }
