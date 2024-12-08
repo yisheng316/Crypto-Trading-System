@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class WalletService {
-    private final WalletRepository walletRepository;
+    private WalletRepository walletRepository;
 
     public List<Wallet> getUserWallets(Long userId) {
         return walletRepository.findByUserId(userId);
